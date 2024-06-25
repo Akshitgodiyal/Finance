@@ -7,7 +7,38 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* TableStyles.css */
+.table-header-cell {
+  /* border-bottom: 2px solid #3B82F6 !important;  */
+}
+
+.category-column, .data-column, .variance-column {
+  border-right: 1px solid #3B82F6; /* Blue right border color for columns */
+}
+
+/* Optional: Add border styles to the entire table */
+.ant-table {
+  border-radius: 0px 0px 0 0 !important;
+overflow-x: auto;
+
+}
+
+/* Specific border styles for the cells */
+.ant-table-cell {
+  border-right: 1px solid #a3a3a3 !important; /* Blue border color for cells */
+}
+
+/* Reset the last column's border */
+.ant-table-cell:last-child {
+  border-right: none !important;
 }
