@@ -165,6 +165,7 @@ const FinancialTable: React.FC = () => {
             className="b-4 font-semibold"
             rowClassName={(record) => (record.key === 'totals' ? 'font-bold totals-row bg-gray-100' : 'bg-gray-100')}
           />
+          {/* hell */}
           {data.map(record => (
             <SubTable
               key={record.key}
