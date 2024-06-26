@@ -196,27 +196,7 @@ const FinancialTable: React.FC = () => {
           >
             <Input />
           </Form.Item>
-          <Form.Item
-            name="31-12-2021"
-            label="31-12-2021"
-            rules={[{ required: true, message: 'Please input the value for 31-12-2021!' }]}
-          >
-            <Input type="number" />
-          </Form.Item>
-          <Form.Item
-            name="31-12-2022"
-            label="31-12-2022"
-            rules={[{ required: true, message: 'Please input the value for 31-12-2022!' }]}
-          >
-            <Input type="number" />
-          </Form.Item>
-          <Form.Item
-            name="31-12-2024"
-            label="31-12-2024"
-            rules={[{ required: true, message: 'Please input the value for 31-12-2024!' }]}
-          >
-            <Input type="number" />
-          </Form.Item>
+      
         </Form>
       </Modal>
       <Modal
