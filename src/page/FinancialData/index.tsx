@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Table, Input, Button, Modal, Form, TableColumnsType } from 'antd';
-import { IconPlus, IconMaximize } from '@tabler/icons-react';
+import { IconPlus } from '@tabler/icons-react';
 import SubTable from '../../component/Subtable';
 import { initialData, initialSubData, staticData } from '../../component/Data';
 
@@ -40,12 +40,12 @@ const FinancialTable: React.FC = () => {
     setIsModalVisible(true);
   };
 
-  const handleAddSubRow = (key: string) => {
-    form.resetFields();
-    setIsAddingSubRow(true);
-    setParentKey(key);
-    setIsModalVisible(true);
-  };
+  // const handleAddSubRow = (key: string) => {
+  //   form.resetFields();
+  //   setIsAddingSubRow(true);
+  //   setParentKey(key);
+  //   setIsModalVisible(true);
+  // };
 
   const handleOk = () => {
     form.validateFields().then((values) => {
@@ -76,10 +76,10 @@ const FinancialTable: React.FC = () => {
 
   const handleCancel = () => setIsModalVisible(false);
 
-  const handleExpandSubTable = (record: DataType) => {
-    setExpandedSubTable(record);
-    setIsExpandModalVisible(true);
-  };
+  // const handleExpandSubTable = (record: DataType) => {
+  //   setExpandedSubTable(record);
+  //   setIsExpandModalVisible(true);
+  // };
 
   const handleExpandModalOk = () => {
     setIsExpandModalVisible(false);
@@ -165,7 +165,7 @@ const FinancialTable: React.FC = () => {
             className="b-4 font-semibold"
             rowClassName={(record) => (record.key === 'totals' ? 'font-bold totals-row bg-gray-100' : 'bg-gray-100')}
           />
-          {/* hell */}
+        
           {data.map(record => (
             <SubTable
               key={record.key}
@@ -197,27 +197,8 @@ const FinancialTable: React.FC = () => {
           >
             <Input />
           </Form.Item>
-          <Form.Item
-            name="31-12-2021"
-            label="31-12-2021"
-            rules={[{ required: true, message: 'Please input the value for 31-12-2021!' }]}
-          >
-            <Input type="number" />
-          </Form.Item>
-          <Form.Item
-            name="31-12-2022"
-            label="31-12-2022"
-            rules={[{ required: true, message: 'Please input the value for 31-12-2022!' }]}
-          >
-            <Input type="number" />
-          </Form.Item>
-          <Form.Item
-            name="31-12-2024"
-            label="31-12-2024"
-            rules={[{ required: true, message: 'Please input the value for 31-12-2024!' }]}
-          >
-            <Input type="number" />
-          </Form.Item>
+         
+        
         </Form>
       </Modal>
       <Modal
